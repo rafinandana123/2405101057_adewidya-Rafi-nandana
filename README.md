@@ -8,7 +8,7 @@
 
 \- Nama: Adewidya Rafi Nandana
 
-\- NIM: \[NIM]
+\- NIM: \2405101057
 
 \- Kelas: 5D
 
