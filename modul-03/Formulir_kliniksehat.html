@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Klinik Sehat</title>
+</head>
+<body>
+
+    <h2>Formulir Pendaftaran Pasien</h2>
+    <h3>Klinik Sehat</h3>
+
+    <form action="#" method="get">
+
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Buat password" required>
+        <br><br>
+
+        <label for="tanggal_lahir">Tanggal Lahir:</label>
+        <input type="date" id="tanggal_lahir" name="tanggal_lahir" required>
+        <br><br>
+
+        <label for="telepon">Nomor Telepon:</label>
+        <input type="tel" id="telepon" name="telepon" placeholder="Masukkan nomor telepon">
+        <br><br>
+
+        Jenis Kelamin:
+        <input type="radio" id="laki" name="jenis_kelamin" value="Laki-laki" required>
+        <label for="laki">Laki-laki</label>
+
+        <input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan">
+        <label for="perempuan">Perempuan</label>
+        <br><br>
+
+        Keluhan:
+        <input type="checkbox" id="demam" name="keluhan[]" value="Demam">
+        <label for="demam">Demam</label>
+
+        <input type="checkbox" id="batuk" name="keluhan[]" value="Batuk">
+        <label for="batuk">Batuk</label>
+
+        <input type="checkbox" id="pusing" name="keluhan[]" value="Pusing">
+        <label for="pusing">Pusing</label>
+
+        <input type="checkbox" id="lainnya" name="keluhan[]" value="Lainnya">
+        <label for="lainnya">Lainnya</label>
+        <br><br>
+
+        <label for="poli">Poli Tujuan:</label>
+        <select id="poli" name="poli" required>
+            <option value="">-- Pilih Poli --</option>
+            <option value="Umum">Poli Umum</option>
+            <option value="Gigi">Poli Gigi</option>
+            <option value="Anak">Poli Anak</option>
+        </select>
+        <br><br>
+
+        <label for="alamat">Alamat:</label>
+        <br>
+        <textarea id="alamat" name="alamat" rows="4" cols="30" placeholder="Masukkan alamat lengkap"></textarea>
+        <br><br>
+
+        <label for="riwayat">Riwayat atau Keterangan Tambahan:</label>
+        <br>
+        <textarea id="riwayat" name="riwayat" rows="4" cols="30" placeholder="Tuliskan keterangan tambahan"></textarea>
+        <br><br>
+
+        <input type="submit" value="Daftar Pasien">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>

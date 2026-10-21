@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Perpustakaan Kota Madiun</title>
+</head>
+<body>
+
+    <h2>Formulir Pendaftaran Anggota</h2>
+    <h3>Perpustakaan Kota Madiun</h3>
+
+    <form action="#" method="get">
+
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Buat password" required>
+        <br><br>
+
+        <label for="tanggal_lahir">Tanggal Lahir:</label>
+        <input type="date" id="tanggal_lahir" name="tanggal_lahir">
+        <br><br>
+
+        Jenis Kelamin:
+        <input type="radio" id="laki" name="jenis_kelamin" value="Laki-laki" required>
+        <label for="laki">Laki-laki</label>
+
+        <input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan">
+        <label for="perempuan">Perempuan</label>
+        <br><br>
+
+        Hobi Membaca:
+        <input type="checkbox" id="fiksi" name="hobi[]" value="Fiksi">
+        <label for="fiksi">Buku Fiksi</label>
+
+        <input type="checkbox" id="ilmiah" name="hobi[]" value="Ilmiah">
+        <label for="ilmiah">Buku Ilmiah</label>
+
+        <input type="checkbox" id="komik" name="hobi[]" value="Komik">
+        <label for="komik">Komik</label>
+        <br><br>
+
+        <label for="alamat">Alamat:</label>
+        <br>
+        <textarea id="alamat" name="alamat" rows="4" cols="30" placeholder="Masukkan alamat lengkap"></textarea>
+        <br><br>
+
+        <label for="kecamatan">Kecamatan:</label>
+        <select id="kecamatan" name="kecamatan" required>
+            <option value="">-- Pilih Kecamatan --</option>
+            <option value="Kartoharjo">Kartoharjo</option>
+            <option value="Manguharjo">Manguharjo</option>
+            <option value="Taman">Taman</option>
+        </select>
+        <br><br>
+
+        <label for="alasan">Alasan Mendaftar:</label>
+        <br>
+        <textarea id="alasan" name="alasan" rows="4" cols="30" placeholder="Tuliskan alasan Anda mendaftar"></textarea>
+        <br><br>
+
+        <input type="submit" value="Daftar Anggota">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>

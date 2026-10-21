@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Praktikum</title>
+</head>
+<body>
+
+    <h2>Formulir Praktikum</h2>
+
+    <form action="formulir.html" method="get">
+
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama">
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br><br>
+
+        Jenis Kelamin:
+        <input type="radio" id="laki" name="jenis_kelamin" value="Laki-laki" checked>
+        <label for="laki">Laki-laki</label>
+
+        <input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan">
+        <label for="perempuan">Perempuan</label>
+        <br><br>
+
+        Hobi:
+        <input type="checkbox" id="baca" name="hobi[]" value="Membaca">
+        <label for="baca">Membaca Buku</label>
+
+        <input type="checkbox" id="nulis" name="hobi[]" value="Menulis">
+        <label for="nulis">Menulis</label>
+
+        <input type="checkbox" id="mancing" name="hobi[]" value="Memancing">
+        <label for="mancing">Memancing</label>
+        <br><br>
+
+        <label for="asal_kota">Asal Kota:</label>
+        <select id="asal_kota" name="asal_kota">
+            <option value="Jakarta">Jakarta</option>
+            <option value="Bandung">Bandung</option>
+            <option value="Semarang" selected>Semarang</option>
+        </select>
+        <br><br>
+
+        <label for="komentar">Komentar Anda:</label>
+        <br>
+        <textarea id="komentar" name="komentar" rows="5" cols="30" placeholder="Silahkan katakan isi hati anda"></textarea>
+        <br><br>
+
+        <input type="submit" value="Mulai Proses!">
+
+    </form>
+
+</body>
+</html>
