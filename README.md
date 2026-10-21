@@ -1,4 +1,4 @@
-4# Repository Praktikum Pemrograman Web Dasar
+# Repository Praktikum Pemrograman Web Dasar
 
 ## Identitas Mahasiswa
 
