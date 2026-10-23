@@ -18,6 +18,7 @@ Repository ini berisi source code dan screenshot hasil praktikum Pemrograman Web
 | Pertemuan | Topik | Source Code dan Screenshot |
 | 01 | HTML              | [Folder](./modul-01/) |
 | 02 | Semantic HTML     | [Folder](./modul-02/) |
+| 03 | FROM HTML         | [Folder](./modul-03/) |
 
 ## Cara Menjalankan Aplikasi
 
