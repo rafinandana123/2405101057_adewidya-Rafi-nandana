@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Input</title>
+    <script>
+        function test() {
+            var val1 = Number(document.kirim.T1.value);
+
+            if (document.kirim.T1.value == "") {
+                alert("Masukkan bilangan terlebih dahulu!");
+                return;
+            }
+
+            if (val1 % 2 == 0) {
+                document.kirim.T2.value = "Bilangan genap";
+            } else {
+                document.kirim.T2.value = "Bilangan ganjil";
+            }
+        }
+    </script>
+</head>
+<body>
+<form method="POST" name="kirim">
+    <p>
+        BIL <input type="text" name="T1" size="20">
+
+        MERUPAKAN BIL
+        <input type="text" name="T2" size="20" readonly>
+    </p>
+    <p>
+        <input type="button" value="TEBAK" name="B1"
+        onclick="test()">
+    </p>
+
+</form>
+</body>
+</html>

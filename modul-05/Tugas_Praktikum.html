@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Portofolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #eef1f6;
+            color: #1e293b;
+        }
+        .header {
+            background: #0b1629;
+            color: white;
+            padding: 28px 8%;
+            position: relative;
+            overflow: hidden;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 30px;
+            letter-spacing: 4px;
+        }
+        .header p {
+            color: #aab8ce;
+            margin-bottom: 0;
+            font-size: 13px;
+            letter-spacing: 2px;
+        }
+        .navigasi {
+            background-color: #13233c;
+            padding: 12px 8%;
+            text-align: right;
+            border-top: 1px solid #263a59;
+        }
+        .navigasi a {
+            display: inline-block;
+            color: #dce5f3;
+            text-decoration: none;
+            padding: 12px 20px;
+            margin-left: 5px;
+            font-size: 13px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .navigasi a:hover {
+            background-color: #d5b779;
+            color: #0b1629;
+        }
+        .banner {
+            height: 310px;
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(58, 58, 58, 0.85),
+                    rgba(5, 15, 32, 0.1)
+                ),
+                url("https://i.pinimg.com/1200x/16/be/c9/16bec9a832a1b90ca555c363c4837401.jpg")
+                center 50% / cover;
+        }
+        .banner-content {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+            color: white;
+        }
+        .banner-content span {
+            color: #d5b779;
+            font-size: 13px;
+            letter-spacing: 4px;
+        }
+        .banner-content h2 {
+            font-size: 38px;
+            margin: 15px 0;
+        }
+        .banner-content p {
+            color: #d8e0ec;
+            font-size: 15px;
+        }
+        .container {
+            width: 84%;
+            margin: 35px auto;
+            overflow: auto;
+        }
+        .sidebar {
+            width: 29%;
+            float: left;
+            background-color: #19263d;
+            color: white;
+            padding: 30px 25px;
+            border-radius: 12px;
+            min-height: 470px;
+        }
+        .profile {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            border: 3px solid #d5b779;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #334c70, #101d32);
+            text-align: center;
+            line-height: 94px;
+            font-size: 38px;
+            color: #d5b779;
+        }
+        .profile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+        }
+        .sidebar h2 {
+            text-align: center;
+            font-size: 20px;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+        .garis {
+            width: 55px;
+            height: 3px;
+            background-color: #d5b779;
+            margin: 15px auto 25px;
+        }
+        .sidebar p {
+            font-size: 14px;
+            color: #bdc9da;
+            line-height: 1.9;
+            text-align: justify;
+        }
+        .sidebar-info {
+            border-top: 1px solid #34445e;
+            margin-top: 25px;
+            padding-top: 15px;
+            font-size: 13px;
+            color: #d5b779;
+        }
+        .main {
+            width: 68%;
+            float: right;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            min-height: 470px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        .section-label {
+            color: #b18d4e;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+        .main h2 {
+            font-size: 27px;
+            color: #10203a;
+            margin: 12px 0;
+        }
+        .intro {
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        .pendidikan {
+            margin-top: 30px;
+            overflow: auto;
+        }
+        .pendidikan a {
+            display: inline-block;
+            width: 23%;
+            padding: 20px 5px;
+            margin-right: 1%;
+            background-color: #f1f4f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            color: #172b4d;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .pendidikan a:hover {
+            background-color: #13233c;
+            color: white;
+            transform: translateY(-5px);
+        }
+        .pendidikan small {
+            display: block;
+            font-size: 11px;
+            font-weight: normal;
+            margin-top: 8px;
+            color: #8290a5;
+        }
+        .pendidikan a:hover small {
+            color: #d5b779;
+        }
+        .cerita {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f9fc;
+            border-left: 4px solid #d5b779;
+            border-radius: 5px;
+        }
+        .cerita h3 {
+            margin-top: 0;
+            color: #172b4d;
+        }
+        .cerita p {
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.9;
+            text-align: justify;
+        }
+        .footer {
+            background-color: #0b1629;
+            color: #aab8ce;
+            text-align: center;
+            padding: 25px;
+            clear: both;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+        @media screen and (max-width: 768px) {
+            .header {
+                text-align: center;
+            }
+            .header h1 {
+                font-size: 23px;
+            }
+            .navigasi {
+                text-align: center;
+                padding: 10px;
+            }
+            .navigasi a {
+                margin: 3px;
+                padding: 10px;
+            }
+            .banner {
+                height: 250px;
+            }
+            .banner-content h2 {
+                font-size: 27px;
+            }
+            .container {
+                width: 92%;
+            }
+            .sidebar,
+            .main {
+                width: 100%;
+                float: none;
+                margin-bottom: 20px;
+            }
+            .pendidikan a {
+                width: 46%;
+                margin: 1%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navigasi">
+        <a href="#home">HOME</a>
+        <a href="#profil">PROFIL</a>
+        <a href="#pendidikan">PENDIDIKAN</a>
+        <a href="#kontak">KONTAK</a>
+    </div>
+
+    <div class="banner" id="home">
+        <div class="banner-content">
+            <span>WELCOME TO MY WEBSITE</span>
+            <h2>This Is My Story.</h2>
+            <p>A little space to share who I am and what I do.</p>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="sidebar" id="profil">
+            <div class="profile">
+                <img src="https://i.pinimg.com/736x/71/11/69/711169a05a33cb1a4f643b368187e6d9.jpg" alt="Foto Profil">
+            </div>
+            <h2>TENTANG AKU</h2>
+            <div class="garis"></div>
+            <p>
+                Nama saya Adewidya Rafi Nandana. Saat ini saya merupakan mahasiswa Teknik Informatika di Universitas PGRI Madiun. Saya suka mencoba hal-hal baru, tertarik dengan teknologi, dan senang mengeksplorasi sesuatu yang belum pernah saya pelajari. Di luar perkuliahan, saya juga punya pengalaman mengikuti kegiatan organisasi dan kepanitiaan kampus.
+            </p>
+            <div class="sidebar-info">
+                PERSONAL PROFILE
+            </div>
+        </div>
+
+        <div class="main">
+            <span class="section-label">
+                MY EDUCATION
+            </span>
+            <h2>Perjalanan Pendidikan</h2>
+            <p class="intro">
+                Dari ruang kelas ke ruang kehidupan, setiap langkah menyimpan cerita dan setiap masa meninggalkan jejak.
+            </p>
+            <div class="pendidikan" id="pendidikan">
+                <a href="#sd">
+                    SD
+                    <small>Dasar</small>
+                </a>
+                <a href="#smp">
+                    SMP
+                    <small>Menengah</small>
+                </a>
+                <a href="#sma">
+                    SMA
+                    <small>Atas</small>
+                </a>
+                <a href="#s1">
+                    S1
+                    <small>Perguruan Tinggi</small>
+                </a>
+            </div>
+            <div class="cerita">
+                <h3 id="sd">Kisah Sekolahku</h3>
+                <p>
+                    Perjalanan pendidikan saya dimulai dari bangku Sekolah Dasar, kemudian berlanjut ke SMP dan SMA, hingga sekarang melanjutkan kuliah di Universitas PGRI Madiun. Masa sekolah dan perkuliahan memberikan banyak pengalaman, mulai dari bertemu teman baru, mengikuti berbagai kegiatan, sampai menghadapi tugas dan tantangan yang berbeda. Sekarang saya masih menjalani perjalanan sebagai mahasiswa Teknik Informatika dan terus menambah pengalaman selama kuliah.
+                </p>
+            </div>
+            <div id="smp"></div>
+            <div id="sma"></div>
+            <div id="s1"></div>
+        </div>
+    </div>
+
+    <div class="footer" id="kontak">
+        &copy; 2026 WEB PORTOFOLIO TUGAS PRAKTIKUM MODUL 5 | ALL RIGHTS RESERVED
+    </div>
+</body>
+</html>

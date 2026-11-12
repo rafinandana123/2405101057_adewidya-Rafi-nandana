@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Sederhana</title>
+</head>
+<body>
+<h2>Kalkulator Sederhana</h2>
+<form>
+    <p>
+        Bil 1:
+        <input type="number" id="bil1">
+    </p>
+    <p>
+        Bil 2:
+        <input type="number" id="bil2">
+    </p>
+    <p>
+        <input type="button" value="+" onclick="hitung('+')">
+        <input type="button" value="-" onclick="hitung('-')">
+        <input type="button" value="x" onclick="hitung('*')">
+        <input type="button" value="/" onclick="hitung('/')">
+    </p>
+    <p>
+        Hasil:
+        <input type="text" id="hasil" readonly>
+    </p>
+</form>
+<script>
+    function hitung(operator) {
+        var bil1 = document.getElementById("bil1").value;
+        var bil2 = document.getElementById("bil2").value;
+        if (bil1 === "" || bil2 === "") {
+            alert("Masukkan Bil 1 dan Bil 2 terlebih dahulu!");
+            return;
+        }
+        bil1 = Number(bil1);
+        bil2 = Number(bil2);
+        var hasil;
+        if (operator == "+") {
+            hasil = bil1 + bil2;
+        } else if (operator == "-") {
+            hasil = bil1 - bil2;
+        } else if (operator == "*") {
+            hasil = bil1 * bil2;
+        } else if (operator == "/") {
+            if (bil2 == 0) {
+                alert("Bilangan tidak dapat dibagi nol!");
+                return;
+            }
+            hasil = bil1 / bil2;
+        }
+        document.getElementById("hasil").value = hasil;
+    }
+</script>
+</body>
+</html>
